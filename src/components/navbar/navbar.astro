@@ -1,7 +1,7 @@
 ---
 import Button from "@components/ui/button.astro";
 import Link from "@components/ui/link.astro";
-import LanguageSelector from "@components/languageselector.astro"; // 🔧 ADDED MISSING IMPORT
+import LanguageSelector from "@components/languageselector.astro"; 
 
 // Remove old astro-i18next imports
 // import { localizePath } from "astro-i18next";
@@ -192,6 +192,13 @@ export const menuitems = [
         )
       }
     </div>
-   
+   <div class="flex justify-center mt-12 gap-3">
+			<LanguageSelector
+				showFlag={false}
+				languageMapping={{ en: "English", it: "Italiano" }}
+				class="appearance-none py-1 px-2 rounded bg-slate-100 dark:bg-stone-950"
+			/>
+			
+		</div>
   </nav>
 </div>
