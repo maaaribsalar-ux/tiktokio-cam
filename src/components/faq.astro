@@ -1,0 +1,165 @@
+---
+const { plan } = Astro.props;
+
+// Remove old astro-i18next import
+// import { t } from "i18next";
+
+// Add new built-in i18n imports
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
+
+// Get current language and create translation function
+const safeUrl = Astro.url || new URL('/', Astro.site || 'http://localhost:4321');
+const lang = getLangFromUrl(safeUrl);
+const t = useTranslations(lang);
+
+const faqs = [
+	
+];
+---
+
+<div class="relative p-4">
+
+<div class="max-w-screen-xl mx-auto">
+
+<section id="faq" class="py-12 relative overflow-hidden">
+
+	<div class="absolute inset-0 w-full h-full" >
+		<div class="absolute inset-0" ></div>
+	</div>
+<div class="container max-w-6xl mx-auto px-4 relative z-10" >
+	<div class="text-center mb-16" >
+            <h2 class="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white">{t("faq.title_sec1")} <span class="text-orange-400 dark:text-orange-400">Tiktokio</span> - {t("faq.title_sec2")}</h2>
+		      <div class="w-24 h-1 mx-auto bg-orange-400"></div>
+			<p class="mt-4 mx-auto text-lg text-gray-900 dark:text-white">{t("faq.faq_text")}</p>
+	</div>
+	<div class="grid md:grid-cols-2 gap-6 max-w-6xl mx-auto" ><!--[-->
+<div class="faq-card bg-gradient-to-r from-slate-900 to-slate-700 rounded-xl backdrop-blur-sm border border-white/10 hover:border-white/20 transition-all duration-300 overflow-hidden" >
+	<button class="w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none" >
+		<h3 class="font-semibold text-white text-lg transition-colors duration-300 pr-4" >{t("faq.question1")}</h3>
+	    <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-purple-500/30 to-pink-500/30 flex items-center justify-center flex-shrink-0 ml-4 transition-all duration-300" >
+		<svg class="w-5 h-5 text-pink-400 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" ><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" ></path></svg>
+	   </div>
+	</button>
+		<div style="display:none;" class="px-6 pb-6 transform" >
+			<div class="w-full h-px bg-gradient-to-r from-transparent via-white/20 to-transparent mb-4" ></div>
+		<p class="text-gray-200 leading-relaxed" >{t("faq.answer1")}</p>
+		</div>
+</div>
+<div class="faq-card bg-gradient-to-r from-slate-700 to-slate-900 rounded-xl backdrop-blur-sm border border-white/10 hover:border-white/20 transition-all duration-300 overflow-hidden" >
+	<button class="w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none" >
+		<h3 class="font-semibold text-white text-lg transition-colors duration-300 pr-4" >{t("faq.question2")}</h3>
+	   <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-purple-500/30 to-pink-500/30 flex items-center justify-center flex-shrink-0 ml-4 transition-all duration-300" >
+		<svg class="w-5 h-5 text-pink-400 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" ><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" ></path></svg>
+	   </div>
+	</button>
+		<div style="display:none;" class="px-6 pb-6 transform" >
+			<div class="w-full h-px bg-gradient-to-r from-transparent via-white/20 to-transparent mb-4" ></div>
+		<p class="text-gray-200 leading-relaxed" >{t("faq.answer2")}</p>
+		</div>
+</div>
+<div class="faq-card bg-gradient-to-r from-slate-900 to-slate-700 rounded-xl backdrop-blur-sm border border-white/10 hover:border-white/20 transition-all duration-300 overflow-hidden" >
+	<button class="w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none" >
+		<h3 class="font-semibold text-white text-lg transition-colors duration-300 pr-4" >{t("faq.question3")}</h3>
+	   <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-purple-500/30 to-pink-500/30 flex items-center justify-center flex-shrink-0 ml-4 transition-all duration-300" >
+		<svg class="w-5 h-5 text-pink-400 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" ><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" ></path></svg>
+	   </div>
+	</button>
+		<div style="display:none;" class="px-6 pb-6 transform" >
+			<div class="w-full h-px bg-gradient-to-r from-transparent via-white/20 to-transparent mb-4" ></div>
+		<p class="text-gray-200 leading-relaxed" >{t("faq.answer3")}</p>
+		</div>
+</div>
+<div class="faq-card bg-gradient-to-r from-slate-700 to-slate-900 rounded-xl backdrop-blur-sm border border-white/10 hover:border-white/20 transition-all duration-300 overflow-hidden" >
+	<button class="w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none" >
+		<h3 class="font-semibold text-white text-lg transition-colors duration-300 pr-4" >{t("faq.question4")}</h3>
+	   <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-purple-500/30 to-pink-500/30 flex items-center justify-center flex-shrink-0 ml-4 transition-all duration-300" >
+		<svg class="w-5 h-5 text-pink-400 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" ><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" ></path></svg>
+	   </div>
+	</button>
+		<div style="display:none;" class="px-6 pb-6 transform" >
+			<div class="w-full h-px bg-gradient-to-r from-transparent via-white/20 to-transparent mb-4" ></div>
+		<p class="text-gray-200 leading-relaxed" >{t("faq.answer4")}</p>
+		</div>
+</div>
+<div class="faq-card bg-gradient-to-r from-slate-900 to-slate-700 rounded-xl backdrop-blur-sm border border-white/10 hover:border-white/20 transition-all duration-300 overflow-hidden" >
+	<button class="w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none" >
+		<h3 class="font-semibold text-white text-lg transition-colors duration-300 pr-4" >{t("faq.question5")}</h3>
+	   <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-purple-500/30 to-pink-500/30 flex items-center justify-center flex-shrink-0 ml-4 transition-all duration-300" >
+		<svg class="w-5 h-5 text-pink-400 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" ><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" ></path></svg>
+	   </div>
+	</button>
+		<div style="display:none;" class="px-6 pb-6 transform" >
+			<div class="w-full h-px bg-gradient-to-r from-transparent via-white/20 to-transparent mb-4" ></div>
+		<p class="text-gray-200 leading-relaxed" >{t("faq.answer5")}</p>
+		</div>
+</div>
+<div class="faq-card bg-gradient-to-r from-slate-700 to-slate-900 rounded-xl backdrop-blur-sm border border-white/10 hover:border-white/20 transition-all duration-300 overflow-hidden" >
+	<button class="w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none" >
+		<h3 class="font-semibold text-white text-lg transition-colors duration-300 pr-4" >{t("faq.question6")}</h3>
+	   <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-purple-500/30 to-pink-500/30 flex items-center justify-center flex-shrink-0 ml-4 transition-all duration-300" >
+		<svg class="w-5 h-5 text-pink-400 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" ><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" ></path></svg>
+	   </div>
+	</button>
+		<div style="display:none;" class="px-6 pb-6 transform" >
+			<div class="w-full h-px bg-gradient-to-r from-transparent via-white/20 to-transparent mb-4" ></div>
+		<p class="text-gray-200 leading-relaxed" >{t("faq.answer6")}</p>
+		</div>
+</div>
+<div class="faq-card bg-gradient-to-r from-slate-900 to-slate-700 rounded-xl backdrop-blur-sm border border-white/10 hover:border-white/20 transition-all duration-300 overflow-hidden" >
+	<button class="w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none" >
+		<h3 class="font-semibold text-white text-lg transition-colors duration-300 pr-4" >{t("faq.question7")}</h3>
+	  <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-purple-500/30 to-pink-500/30 flex items-center justify-center flex-shrink-0 ml-4 transition-all duration-300" >
+		<svg class="w-5 h-5 text-pink-400 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" ><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" ></path></svg>
+	  </div>
+	</button>
+		<div style="display:none;" class="px-6 pb-6 transform" >
+			<div class="w-full h-px bg-gradient-to-r from-transparent via-white/20 to-transparent mb-4" ></div>
+		<p class="text-gray-200 leading-relaxed" >{t("faq.answer7")}</p>
+		</div>
+</div>
+<div class="faq-card bg-gradient-to-r from-slate-700 to-slate-900 rounded-xl backdrop-blur-sm border border-white/10 hover:border-white/20 transition-all duration-300 overflow-hidden" >
+	<button class="w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none" >
+		<h3 class="font-semibold text-white text-lg transition-colors duration-300 pr-4" >{t("faq.question8")}</h3>
+	   <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-purple-500/30 to-pink-500/30 flex items-center justify-center flex-shrink-0 ml-4 transition-all duration-300" >
+		<svg class="w-5 h-5 text-pink-400 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" ><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" ></path></svg>
+	   </div>
+	</button>
+		<div style="display:none;" class="px-6 pb-6 transform" >
+			<div class="w-full h-px bg-gradient-to-r from-transparent via-white/20 to-transparent mb-4" ></div>
+		<p class="text-gray-200 leading-relaxed" >{t("faq.answer8")}</p>
+		</div>
+</div>
+<div class="faq-card bg-gradient-to-r from-slate-900 to-slate-700 rounded-xl backdrop-blur-sm border border-white/10 hover:border-white/20 transition-all duration-300 overflow-hidden" >
+	<button class="w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none" >
+		<h3 class="font-semibold text-white text-lg transition-colors duration-300 pr-4" >{t("faq.question9")}</h3>
+	  <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-purple-500/30 to-pink-500/30 flex items-center justify-center flex-shrink-0 ml-4 transition-all duration-300" >
+		<svg class="w-5 h-5 text-pink-400 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" ><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" ></path></svg>
+	  </div>
+	</button>
+		<div style="display:none;" class="px-6 pb-6 transform" >
+			<div class="w-full h-px bg-gradient-to-r from-transparent via-white/20 to-transparent mb-4" ></div>
+		<p class="text-gray-200 leading-relaxed" >{t("faq.answer9")}</p>
+		</div>
+</div>
+<div class="faq-card bg-gradient-to-r from-slate-700 to-slate-900 rounded-xl backdrop-blur-sm border border-white/10 hover:border-white/20 transition-all duration-300 overflow-hidden" >
+	<button class="w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none" >
+		<h3 class="font-semibold text-white text-lg transition-colors duration-300 pr-4" >{t("faq.question10")}</h3>
+	  <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-purple-500/30 to-pink-500/30 flex items-center justify-center flex-shrink-0 ml-4 transition-all duration-300" >
+		<svg class="w-5 h-5 text-pink-400 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" ><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" ></path></svg>
+	  </div>
+	</button>
+		<div style="display:none;" class="px-6 pb-6 transform" >
+			<div class="w-full h-px bg-gradient-to-r from-transparent via-white/20 to-transparent mb-4" ></div>
+		<p class="text-gray-200 leading-relaxed" >{t("faq.answer10")}</p>
+		</div>
+</div>
+<!--]-->
+</div>
+	<div class="flex justify-center mt-12" >
+                  <a href="/" class="bg-gradient-to-r from-slate-900 to-slate-700 p-6 rounded-xl backdrop-blur-sm border border-white/10 hover:border-white/20 transition-all duration-300 transform hover:scale-105 hover:-translate-y-2 text-lg text-white dark:text-white">{t("newsletter.down_button")}</a>
+	</div>
+</div>
+</section>
+	
+</div>
+</div>

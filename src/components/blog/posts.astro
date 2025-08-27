@@ -1,0 +1,81 @@
+---
+import { getLangFromUrl, useTranslations } from "../../i18n/utils";
+import { getRelativeLocaleUrl } from "astro:i18n";
+import { getArticleReadingTime } from "@utils/blog";
+import { Icon } from "astro-icon/components";
+
+const { posts } = Astro.props;
+
+// Get current language and create translation function
+const safeUrl = Astro.url || new URL('/', Astro.site || 'http://localhost:4321');
+const lang = getLangFromUrl(safeUrl);
+const t = useTranslations(lang);
+
+// Helper function to create localized paths
+function localizePath(path: string) {
+	if (!path || (path && path.startsWith('http')) || path === '#') return path;
+	return getRelativeLocaleUrl(lang, path);
+}
+---
+
+<div class="grid gap-10 lg:gap-10 md:grid-cols-2 xl:grid-cols-3">
+	{
+		posts.map((post) => {
+			const readTime = getArticleReadingTime(post.body);
+			// Create proper post URL
+			const postUrl = localizePath(`/blog/${post.slug}`);
+			const categoryUrl = localizePath(`/blog/category/${post.data.category?.toLowerCase()}`);
+			
+			return (
+				<div class="cursor-pointer group">
+					<div class="overflow-hidden rounded-md bg-gray-100 transition-all hover:scale-105 dark:bg-gray-800">
+						{post.data.image && (
+							<a class="relative block aspect-video" href={postUrl}>
+								<img
+									alt={post.data.image.alt || ""}
+									class="object-cover w-full h-full transition duration-300"
+									height="240"
+									loading="lazy"
+									sizes="(max-width: 768px) 30vw, 33vw"
+									src={post.data.image.src}
+									width="360"
+								/>
+							</a>
+						)}
+					</div>
+					<div class="mt-4">
+						<div>
+							<a 
+								href={categoryUrl}
+								class="text-blue-400 dark:text-stone-400 uppercase tracking-wider text-sm font-medium hover:underline">
+								{post.data.category}
+							</a>
+						</div>
+						<div class="mt-2">
+							<a class="text-xl font-semibold leading-snug tracking-tight dark:text-white" href={postUrl}>
+								<span class="bg-gradient-to-r from-green-200 to-green-100 bg-[length:0px_10px] bg-left-bottom bg-no-repeat transition-[background-size] duration-500 hover:bg-[length:100%_3px] group-hover:bg-[length:100%_10px] dark:from-purple-800 dark:to-purple-900">
+									{post.data.title}
+								</span>
+							</a>
+						</div>
+						<div class="flex gap-2 mt-3">
+							<span class="text-gray-400">
+								<Icon name="fluent:person-24-filled" width="20" />
+							</span>
+							<span class="text-sm text-gray-400">
+								{post.data.author}
+							</span>
+							<span class="text-sm text-gray-400">•</span>
+							<span class="text-sm text-gray-400">
+								{readTime} min read
+							</span>
+						</div>
+						<p class="text-sm leading-6 text-gray-500 dark:text-gray-400 mt-2">
+							{post.data.snippet}
+						</p>
+					</div>
+				</div>
+			)
+		})
+	}
+</div>
