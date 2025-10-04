@@ -21,12 +21,11 @@ function localizePath(path: string) {
 	return getRelativeLocaleUrl(lang, path);
 }
 
-const title = "About Us - Tiktokio";
-
-
+const title = "Contact Us - TikTokio";
+const description = "Get in touch with TikTokio team. Have questions about downloading TikTok videos? Need support or have feedback? Contact us and we'll be happy to help you.";
 ---
 
-<Layout title="About Us - Welcome to TikTokio">
+<Layout title={title} description={description}>
 
 <section class="bg-blue-50 dark:bg-slate-800" id="contact">
     <div class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-20">
@@ -135,4 +134,3 @@ const title = "About Us - Tiktokio";
 </section>
 
 </Layout>
-
