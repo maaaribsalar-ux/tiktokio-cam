@@ -1,4 +1,6 @@
 ---
+export const prerender = true;
+
 import { getCollection } from "astro:content";
 import Container from "@components/container.astro";
 import Layout from "@layouts/Layout.astro";
@@ -93,7 +95,7 @@ const blogUrl = localizePath("/blog");
 <Layout title={post.data.title} lang={lang}>
 	<Container>
 		<div class="mx-auto prose prose-lg dark:prose-invert mt-14">
-			<a
+			
 				href={categoryUrl}
 				class="text-blue-400 dark:text-stone-400 uppercase tracking-wider text-sm font-medium no-underline hover:underline">
 				{post.data.category}
