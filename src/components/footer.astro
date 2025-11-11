@@ -4,10 +4,6 @@ import { menuitems } from "@components/navbar/navbar.astro";
 import ThemeSelector from "@components/themeselector.astro";
 import logo from "assets/logo.svg";
 
-// Remove old astro-i18next imports
-// import { localizePath } from "astro-i18next";
-// import { t } from "i18next";
-
 // Add new built-in i18n imports
 import { getLangFromUrl, useTranslations } from "../i18n/utils";
 import { getRelativeLocaleUrl } from "astro:i18n";
@@ -44,7 +40,7 @@ function localizePath(path: string) {
 				<a href={localizePath("/contact")} class="duration-300 hover:text-gray-900 dark:hover:text-gray-100">Contact Us</a>
 			</li>
 			<li role="listitem">
-				<a href={localizePath("/privacy-policy")} class="duration-300 hover:text-gray-900 dark:hover:text-gray-100">privacy Policy</a>
+				<a href={localizePath("/privacy-policy")} class="duration-300 hover:text-gray-900 dark:hover:text-gray-100">Privacy Policy</a>
 			</li>
 			{
 				menuitems.map(
@@ -61,167 +57,227 @@ function localizePath(path: string) {
 			}
 		</ul>
 		
+		<!-- ============================================ -->
+		<!-- OPTIMIZED SCHEMA MARKUP FOR BETTER SERP -->
+		<!-- ============================================ -->
 		
+		<!-- 1. WebSite Schema (CRITICAL - Shows brand name in SERP) -->
 		<script type="application/ld+json">
-                    {
-                        "@context": "http://schema.org",
-                        "@type": "Organization",
-                        "name": "Tiktokio",
-                        "url": "https://tiktokio.cam",
-                        "logo": "/apple-touch-icon-180x180.webp",
-                        "image": "/meta/opengraph.webp",
-                        "description":"TikTokio - Tiktok downloader to online download tiktok videos in mp4 without watermark easily, Tiktok video downloader is Fast, easy and works on any device",
-                        "email": "contact@tiktokio.cam"
-                    }
-                </script>
-                                
-				<script type="application/ld+json">
-				{ "@context": "http://schema.org", 
-				"@type": "WebPage", 
-				"url": "https://tiktokio.cam", 
-				"inLanguage":"en-US", 
-				"description": "TikTokio is Tiktok video downloader to online download tiktok videos without watermark easily, download video from tiktok, free download tiktok video in mp4." } 
-				</script>
-				
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "What is Tiktok - Tiktokio Video Downloader and how does it work?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Tiktok Video Downloader lets you download videos, reels, stories, and profile pictures from Tiktok. It processes the URL, extracts the media file, and provides a high-quality download link to save content directly to your device without watermarks."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "How accurate is the Tiktokio - Tiktok Video Downloader for downloading high-quality videos?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Tiktok Video Downloader maintains original video quality in most cases. It ensures you get the highest resolution available from Tiktok while preserving all video details, colors, and audio quality."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "How long does it take to download videos using Tiktokio - Tiktok Video Downloader?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Tiktokio - Tiktok Video Downloader processes most requests within seconds. Download time depends on your internet speed and video size. Most Tiktok videos, reels, and stories download in under 30 seconds, while longer Tiktok videos might take slightly more time."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Can I use Tiktok Video Downloader to save multiple videos at once?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes! Tiktokio - Tiktok Video Downloader supports batch downloading, allowing you to save multiple Tiktok videos, reels, and stories simultaneously. This time-saving feature is perfect for content creators, marketers, or anyone needing to download several videos efficiently."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Will Tiktokio - Tiktok Video Downloader work if I download content multiple times?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes, Tiktokio Tiktok Video Downloader works reliably every time. There are no limits to how many times you can download the same or different content. The servers are optimized to handle repeated requests, ensuring consistent performance for all your downloads."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "How can I use videos downloaded with Tiktok Video Downloader?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Videos from Tiktok Video Downloader can be used for offline viewing, content collections, educational purposes, presentations, or sharing across platforms. The downloaded MP4 files are compatible with all major devices and video players."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Is Tiktokio - Tiktok Video Downloader compatible with all Tiktok content types?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Tiktok - Tiktok Video Downloader works with all Tiktok content types including regular videos, reels, stories, IGTV videos, and carousel posts containing videos. It's regularly updated to accommodate Tiktok platform changes."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Is my data private when using Tiktok Video Downloader?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes, Tiktokio - Tiktok Video Downloader prioritizes your privacy. It doesn't store downloaded videos or track download history. The process happens through secure connections without requiring accounts or personal information."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What devices and browsers support Tiktok Video Downloader?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Tiktokio - Tiktok Downloader works on all major devices (Windows, Mac, iPhone, iPad, Android) and browsers (Chrome, Firefox, Safari, Edge, Opera). This cross-platform compatibility ensures you can download Tiktok videos on any device."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Can I download private Tiktok content with Tiktokio - Tiktok Downloader?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Tiktok Video Downloader can only download content you have permission to view. For private accounts, you must be logged in and following that account. Tiktok Downloader respects Tiktok's privacy settings and copyright policies."
-      }
-    }
-  ]
-}
-</script>
-<script type="application/ld+json"> 
-
-{ "@context": "https://schema.org", 
-"@type": "WebApplication", 
-"name": "Tiktokio", 
-"alternateName": [ "TikTokio - TikTok Video Downloader" ], 
-"image": "https://tiktokio.cam/images/tiktokio-logo.webp", 
-"operatingSystem": "Windows, Linux, iOS, Android, OSX, macOS", 
-"applicationCategory": "UtilitiesApplication", 
-"featureList": [ "TikTokio", "TikTok Video Downloader", "Download Tiktok Videos without watermark", "Download TikTok Videos", "Download Tiktok photos", "Download Douyin Video" ], 
-"aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.6", "ratingCount": "8173" }, 
-"offers": { "@type": "Offer", "price": "0.00", "priceCurrency": "USD" } }
-
-</script>				
-			<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-C33KK2QQG5"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-C33KK2QQG5');
-</script>
+		{
+			"@context": "https://schema.org",
+			"@type": "WebSite",
+			"name": "TikTokio",
+			"alternateName": "TikTokio - TikTok Video Downloader",
+			"url": "https://tiktokio.cam",
+			"description": "Download TikTok videos without watermark in HD quality. Free, fast, and unlimited downloads.",
+			"potentialAction": {
+				"@type": "SearchAction",
+				"target": {
+					"@type": "EntryPoint",
+					"urlTemplate": "https://tiktokio.cam/?url={search_term_string}"
+				},
+				"query-input": "required name=search_term_string"
+			},
+			"inLanguage": "en-US"
+		}
+		</script>
 		
+		<!-- 2. Organization Schema -->
+		<script type="application/ld+json">
+		{
+			"@context": "https://schema.org",
+			"@type": "Organization",
+			"name": "TikTokio",
+			"url": "https://tiktokio.cam",
+			"logo": "https://tiktokio.cam/apple-touch-icon-180x180.webp",
+			"image": "https://tiktokio.cam/meta/opengraph.webp",
+			"description": "TikTokio is a powerful TikTok downloader that helps users save videos without watermarks in high quality MP4 format.",
+			"email": "contact@tiktokio.cam",
+			"sameAs": [
+				"https://x.com/tiktokio_cam"
+			],
+			"contactPoint": {
+				"@type": "ContactPoint",
+				"contactType": "Customer Support",
+				"email": "contact@tiktokio.cam"
+			}
+		}
+		</script>
+		
+		<!-- 3. WebApplication Schema -->
+		<script type="application/ld+json">
+		{
+			"@context": "https://schema.org",
+			"@type": "WebApplication",
+			"name": "TikTokio",
+			"alternateName": "TikTokio - TikTok Video Downloader",
+			"url": "https://tiktokio.cam",
+			"image": "https://tiktokio.cam/images/tiktokio-logo.webp",
+			"applicationCategory": "MultimediaApplication",
+			"applicationSubCategory": "Video Downloader",
+			"operatingSystem": "Web Browser, Windows, Linux, iOS, Android, macOS",
+			"browserRequirements": "Requires JavaScript. Requires HTML5.",
+			"featureList": [
+				"Download TikTok videos without watermark",
+				"HD quality video downloads",
+				"MP4 and MP3 format support",
+				"No registration required",
+				"Unlimited free downloads",
+				"Cross-platform compatibility"
+			],
+			"offers": {
+				"@type": "Offer",
+				"price": "0.00",
+				"priceCurrency": "USD"
+			},
+			"aggregateRating": {
+				"@type": "AggregateRating",
+				"ratingValue": "4.6",
+				"ratingCount": "8173",
+				"bestRating": "5",
+				"worstRating": "1"
+			}
+		}
+		</script>
+		
+		<!-- 4. FAQPage Schema (Optimized for SERP) -->
+		<script type="application/ld+json">
+		{
+			"@context": "https://schema.org",
+			"@type": "FAQPage",
+			"mainEntity": [
+				{
+					"@type": "Question",
+					"name": "Is TikTokio free to use?",
+					"acceptedAnswer": {
+						"@type": "Answer",
+						"text": "Yes, TikTokio is completely free with unlimited downloads and no hidden fees. You don't need to create an account or provide payment information to use our service."
+					}
+				},
+				{
+					"@type": "Question",
+					"name": "Does TikTokio remove watermarks from videos?",
+					"acceptedAnswer": {
+						"@type": "Answer",
+						"text": "Yes, TikTokio automatically removes watermarks and provides clean, high-quality MP4 videos that you can save and share without any branding."
+					}
+				},
+				{
+					"@type": "Question",
+					"name": "Do I need to create an account?",
+					"acceptedAnswer": {
+						"@type": "Answer",
+						"text": "No, TikTokio works without registration. Simply paste the TikTok video link and download instantly without creating an account."
+					}
+				},
+				{
+					"@type": "Question",
+					"name": "What video quality does TikTokio support?",
+					"acceptedAnswer": {
+						"@type": "Answer",
+						"text": "TikTokio preserves the original video quality, including HD quality when available. We ensure you get the highest resolution possible from the source."
+					}
+				},
+				{
+					"@type": "Question",
+					"name": "How long does it take to download a video?",
+					"acceptedAnswer": {
+						"@type": "Answer",
+						"text": "Most videos download within seconds. The exact time depends on your internet speed and video size, but typically takes less than 30 seconds."
+					}
+				},
+				{
+					"@type": "Question",
+					"name": "Is my data private when using TikTokio?",
+					"acceptedAnswer": {
+						"@type": "Answer",
+						"text": "Yes, we prioritize your privacy. TikTokio doesn't store downloaded videos or track your download history. The process happens through secure connections without requiring personal information."
+					}
+				},
+				{
+					"@type": "Question",
+					"name": "What devices and browsers are supported?",
+					"acceptedAnswer": {
+						"@type": "Answer",
+						"text": "TikTokio works on all major devices including Windows, Mac, iPhone, iPad, and Android. It's compatible with all modern browsers like Chrome, Firefox, Safari, Edge, and Opera."
+					}
+				},
+				{
+					"@type": "Question",
+					"name": "Can I download multiple videos at once?",
+					"acceptedAnswer": {
+						"@type": "Answer",
+						"text": "Yes, TikTokio supports batch downloading, allowing you to save multiple videos simultaneously. This feature is perfect for content creators and marketers who need efficient bulk downloads."
+					}
+				}
+			]
+		}
+		</script>
+		
+		<!-- 5. BreadcrumbList Schema (for homepage) -->
+		<script type="application/ld+json">
+		{
+			"@context": "https://schema.org",
+			"@type": "BreadcrumbList",
+			"itemListElement": [
+				{
+					"@type": "ListItem",
+					"position": 1,
+					"name": "Home",
+					"item": "https://tiktokio.cam"
+				}
+			]
+		}
+		</script>
+		
+		<!-- Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-C33KK2QQG5"></script>
+		<script is:inline>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+			gtag('config', 'G-C33KK2QQG5');
+		</script>
+		
+		<!-- Social Media Links -->
 		<div class="m-auto mt-4 flex w-max items-center justify-between space-x-4 text-gray-500 dark:text-white">
-			<a class="duration-300 hover:text-gray-900 dark:hover:text-gray-100" href="https://x.com/tiktokio_cam" title="twitter" target="blank" aria-label="twitter">
+			<a class="duration-300 hover:text-gray-900 dark:hover:text-gray-100" 
+			   href="https://x.com/tiktokio_cam" 
+			   title="Follow us on Twitter" 
+			   target="_blank" 
+			   rel="noopener noreferrer"
+			   aria-label="Follow TikTokio on Twitter">
 				<svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="m-auto h-5 w-5" viewBox="0 0 16 16">
-					<path
-						d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z">
-					</path>
+					<path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"></path>
 				</svg>
 			</a>
-			<a class="duration-300 hover:text-gray-900 dark:hover:text-gray-100" href="#" title="facebook" target="blank" aria-label="facebook">
+			<a class="duration-300 hover:text-gray-900 dark:hover:text-gray-100" 
+			   href="#" 
+			   title="Follow us on Facebook" 
+			   target="_blank" 
+			   rel="noopener noreferrer"
+			   aria-label="Follow TikTokio on Facebook">
 				<svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="m-auto w-5" viewBox="0 0 16 16">
-					<path
-						d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z">
-					</path>
+					<path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"></path>
 				</svg>
 			</a>
-			<a class="duration-300 hover:text-gray-900 dark:hover:text-gray-100" href="#" title="linkedin" target="blank" aria-label="linkedin">
+			<a class="duration-300 hover:text-gray-900 dark:hover:text-gray-100" 
+			   href="#" 
+			   title="Follow us on LinkedIn" 
+			   target="_blank" 
+			   rel="noopener noreferrer"
+			   aria-label="Follow TikTokio on LinkedIn">
 				<svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="m-auto w-5" viewBox="0 0 16 16">
-					<path
-						d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.520-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z">
-					</path>
+					<path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.520-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"></path>
 				</svg>
 			</a>
 		</div>
 		
+		<!-- Copyright -->
 		<div class="mt-4 text-center">
-			<span class="text-sm tracking-wide text-gray-500 dark:text-white">Copyright © {t("features.tiktokio")} 2025 - Present. All rights reserved</span>
-
+			<span class="text-sm tracking-wide text-gray-500 dark:text-white">
+				Copyright © TikTokio 2025 - Present. All rights reserved
+			</span>
 		</div>
 	</div>
 </footer>
