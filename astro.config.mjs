@@ -17,7 +17,7 @@ export default defineConfig({
   // Add Astro's built-in i18n configuration
   i18n: {
     defaultLocale: "en",
-    locales: ["en", "it", "ar", "fr", "de", "es", "hi", "id", "ru", "pt", "ko", "tl", "nl", "ms", "tr"],
+    locales: ["en", "it", "vi", "ar", "fr", "de", "es", "hi", "id", "ru", "pt", "ko", "tl", "nl", "ms", "tr"],
     routing: {
       prefixDefaultLocale: false,
     },
@@ -39,7 +39,7 @@ export default defineConfig({
     sitemap({
       filter(page) {
         const url = new URL(page, 'https://tiktokio.cam');
-        const nonEnglishLangs = ['ar', 'it', 'de', 'es', 'fr', 'hi', 'id', 'ko', 'ms', 'nl', 'pt', 'ru', 'tl', 'tr'];
+        const nonEnglishLangs = ['ar', 'vi', 'it', 'de', 'es', 'fr', 'hi', 'id', 'ko', 'ms', 'nl', 'pt', 'ru', 'tl', 'tr'];
         const shouldExclude =
           nonEnglishLangs.some(lang =>
             url.pathname.startsWith(`/${lang}/blog/`) &&
