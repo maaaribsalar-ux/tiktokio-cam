@@ -14,9 +14,10 @@ const lang = getLangFromUrl(safeUrl);
 const t = useTranslations(lang);
 ---
 
-<Layout dir={lang === 'tr' ? 'ltr' : 'ltr'}>
+<Layout dir={lang === 'vn' ? 'ltr' : 'ltr'}>
+<Hero />
 	<Container>
-		<Hero />
+		
 		<Features />
 		<Faq />
 	</Container>
