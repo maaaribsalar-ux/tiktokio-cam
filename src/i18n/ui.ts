@@ -1,7 +1,7 @@
 export const languages = {
   en: 'English',
-  vi: 'Tiếng Việt',
   it: 'Italiano',
+  vi: 'Tiếng Việt',
   ar: 'العربية',
   fr: 'Français',
   de: 'Deutsch',
@@ -11,11 +11,13 @@ export const languages = {
   ru: 'Русский',
   pt: 'Português',
   ko: '한국어',
-  tl: 'Wikang Tagalog',
+  tl: 'Tagalog',
   nl: 'Nederlands',
-  ms: 'Malay',
+  ms: 'Bahasa Melayu',
   tr: 'Türkçe',
 };
+
+
 
 export const defaultLang = 'en';
 
