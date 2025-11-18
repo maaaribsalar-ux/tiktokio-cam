@@ -608,7 +608,7 @@ function InputScreen({}: Props) {
               </button>
             </form>
              <div class="mt-3 p-3 bg-blue-100 border border-blue-300 rounded-lg flex items-center justify-between">
-      <span class="text-sm font-medium">Due To <strong>Cloudflare<strong/> global update issue, You may face problem while Downlaoding Video. Please Accept Appologize and stay connected as Update complete, We will be able to provide complete Downloads</span>
+      <span class="text-sm font-medium">Due To Cloudflare global update issue, You may face problem while Downlaoding Video. Please Accept Appologize and stay connected as Update complete, We will be able to provide complete Downloads</span>
                <div/>
             {/* Auto-processing indicator with cancel option */}
             {autoProcessing() && (
